@@ -31,7 +31,7 @@
 	</div>
 	<div id="shop_info">
 		<label>Shop</label></br>
-		<label>Shop Name: </label><input type="text" name="sname"/></br>
+		<label>Shop Name: </label><input type="text" name="shopName"/></br>
 		<label>Shop Address: </label><input type="text" name="address"/></br>
 		<label>Tel. No: </label><input type="text" name="telno" pattern="[0-9]+"/></br>
 		<label>Upload Shop Logo: </label><input type="file" name="slogo" pattern=".+(.jpg|.png|.gif|.jepg)"/></br>

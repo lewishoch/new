@@ -3,7 +3,7 @@ package po;
 public class Merchant {
 	private int id;
 	private String name;
-	private String age;
+	private int age;
 	private String gender;
 	private String shopName;
 	private String shopAddress;
@@ -21,10 +21,10 @@ public class Merchant {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public String getAge() {
+	public int getAge() {
 		return age;
 	}
-	public void setAge(String age) {
+	public void setAge(int age) {
 		this.age = age;
 	}
 	public String getGender() {
