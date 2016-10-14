@@ -1,4 +1,4 @@
-package ui;
+package ui.dish;
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -7,10 +7,18 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class LoginServlet
+ * Servlet implementation class UpdateDishServlet
  */
-public class LoginServlet extends HttpServlet {
+public class UpdateDishServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+       
+    /**
+     * @see HttpServlet#HttpServlet()
+     */
+    public UpdateDishServlet() {
+        super();
+        // TODO Auto-generated constructor stub
+    }
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)

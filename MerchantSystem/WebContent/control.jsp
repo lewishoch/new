@@ -4,9 +4,15 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Merchant System</title>
 </head>
 <body>
-
+<div id="content">
+	<div id="shop">
+	</div>
+	<div id="dish">
+		
+	</div>
+</div>
 </body>
 </html>
