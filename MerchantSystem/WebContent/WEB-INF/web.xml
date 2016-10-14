@@ -69,4 +69,24 @@
     <servlet-name>UpdateDishServlet</servlet-name>
     <url-pattern>/updateDish</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AddDishServlet</display-name>
+    <servlet-name>AddDishServlet</servlet-name>
+    <servlet-class>ui.AddDishServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddDishServlet</servlet-name>
+    <url-pattern>/addDish</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DeleteDishServlet</display-name>
+    <servlet-name>DeleteDishServlet</servlet-name>
+    <servlet-class>ui.DeleteDishServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DeleteDishServlet</servlet-name>
+    <url-pattern>/deleteDish</url-pattern>
+  </servlet-mapping>
 </web-app>

@@ -1,4 +1,4 @@
-package ui;
+package ui.account;
 
 import java.io.IOException;
 
@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import po.Merchant;
 import jms.producer.JMSProducer;
 import jms.producer.impl.PtpProducer;
+
 
 
 /**
