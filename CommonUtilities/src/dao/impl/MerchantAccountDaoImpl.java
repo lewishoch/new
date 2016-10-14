@@ -7,15 +7,15 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import dao.MerchantDao;
-import po.Merchant;
+import dao.MerchantAccountDao;
+import po.MerchantAccount;
 import util.DBUtil;
 
-public class MerchantDaoImpl implements MerchantDao {
+public class MerchantAccountDaoImpl implements MerchantAccountDao {
 
 	@Override
-	public boolean addMerchant(Merchant m) {
-		String sql = "insert into merch_account(account_uuid,status,user_name,password,created_dt_gmt,last_modified_dt_gmt) values (merchant_seq.nextval,?,?,?,?,?)";
+	public boolean addMerchant(MerchantAccount m) {
+		String sql = "insert into merch_account(account_uuid,status,user_name,password,created_dt_gmt,last_modified_dt_gmt) values (merchant_acc_seq1.nextval,?,?,?,?,?)";
 		Connection con = null;
 		PreparedStatement pst = null;
 		
@@ -37,7 +37,7 @@ public class MerchantDaoImpl implements MerchantDao {
 	}
 
 	@Override
-	public boolean updateMerchant(Merchant m) {
+	public boolean updateMerchant(MerchantAccount m) {
 		String sql = "update merch_account set status=?, user_name=?, password=?, created_dt_gmt=?, last_modified_dt_gmt=? where account_uuid=?";
 		Connection con = null;
 		PreparedStatement pst = null;
@@ -61,8 +61,8 @@ public class MerchantDaoImpl implements MerchantDao {
 	}
 
 	@Override
-	public List<Merchant> findAllMerchants(int status) {
-		List<Merchant> ms = new ArrayList<Merchant>();
+	public List<MerchantAccount> findAllMerchants(int status) {
+		List<MerchantAccount> ms = new ArrayList<MerchantAccount>();
 		
 		String sql = "select uuid, status, user_name un, password psd, created_dt_gmt cre_dt, last_modified_dt_gmt last_mod_dt from merch_account";
 		Connection con = null;
@@ -75,7 +75,7 @@ public class MerchantDaoImpl implements MerchantDao {
 			rs = pst.executeQuery();
 			
 			while (rs.next()) {
-				Merchant m = new Merchant();
+				MerchantAccount m = new MerchantAccount();
 				
 				m.setUuid(rs.getLong("uuid"));
 				m.setStatus(rs.getInt("status"));
@@ -97,8 +97,8 @@ public class MerchantDaoImpl implements MerchantDao {
 	}
 
 	@Override
-	public Merchant loadMerchant(String userName) {
-		Merchant m = null;
+	public MerchantAccount loadMerchant(String userName) {
+		MerchantAccount m = null;
 		String sql = "select uuid, status, user_name un, password psd, created_dt_gmt cre_dt, last_modified_dt_gmt last_mod_dt from merch_account where user_name=?";
 		Connection con = null;
 		PreparedStatement pst = null;
@@ -111,7 +111,7 @@ public class MerchantDaoImpl implements MerchantDao {
 			rs = pst.executeQuery();
 			
 			if (rs.next()) {
-				m = new Merchant();
+				m = new MerchantAccount();
 				
 				m.setUuid(rs.getLong("uuid"));
 				m.setStatus(rs.getInt("status"));
@@ -130,8 +130,8 @@ public class MerchantDaoImpl implements MerchantDao {
 		return m;
 	}
 	
-	public Merchant loadMerchant(long uuid) {
-		Merchant m = null;
+	public MerchantAccount loadMerchant(long uuid) {
+		MerchantAccount m = null;
 		String sql = "select uuid, status, user_name un, password psd, created_dt_gmt cre_dt, last_modified_dt_gmt last_mod_dt from merch_account where uuid=?";
 		Connection con = null;
 		PreparedStatement pst = null;
@@ -144,7 +144,7 @@ public class MerchantDaoImpl implements MerchantDao {
 			rs = pst.executeQuery();
 			
 			if (rs.next()) {
-				m = new Merchant();
+				m = new MerchantAccount();
 				
 				m.setUuid(rs.getLong("uuid"));
 				m.setStatus(rs.getInt("status"));
