@@ -1,9 +1,0 @@
-Manifest-Version: 1.0
-<<<<<<< HEAD
-Built-By: HOUDR
-=======
-Built-By: CHEUNWH
->>>>>>> c1ebe7b962d09e1104286bd011230af29c31f1c2
-Build-Jdk: 1.8.0_101
-Created-By: Maven Integration for Eclipse
-
