@@ -1,0 +1,23 @@
+<<<<<<< HEAD
+package dao;
+
+import po.MerchantProfile;
+
+public interface MerchantProfileDao {
+	public boolean addMerchantProfile(MerchantProfile mp);
+	public boolean updateMerchant(MerchantProfile mp);
+	public MerchantProfile loadMerchantProfile(String merchantName);
+	public MerchantProfile loadMerchantProfile(long uuid);
+}
+=======
+package dao;
+
+import po.MerchantProfile;
+
+public interface MerchantProfileDao {
+	public boolean addMerchantProfile(MerchantProfile mp);
+	public boolean updateMerchant(MerchantProfile mp);
+	public MerchantProfile loadMerchantProfile(String merchantName);
+	public MerchantProfile loadMerchantProfile(long uuid);
+}
+>>>>>>> c1ebe7b962d09e1104286bd011230af29c31f1c2
