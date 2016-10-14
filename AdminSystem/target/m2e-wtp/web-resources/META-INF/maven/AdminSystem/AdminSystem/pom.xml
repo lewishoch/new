@@ -17,7 +17,11 @@
       </plugin>
     </plugins>
   </build>
+<<<<<<< HEAD
    <dependencies>
+=======
+    <dependencies>
+>>>>>>> c1ebe7b962d09e1104286bd011230af29c31f1c2
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
